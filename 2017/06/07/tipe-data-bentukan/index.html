@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Tipe Data Bentukan | Lab Pemrograman Dasar | Lab Pemrograman Universitas Dian Nuswantoro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="struct,class,abstract data type,tipe data">
+    <meta name="description" content="Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan">
+<meta name="keywords" content="struct,class,abstract data type,tipe data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tipe Data Bentukan">
+<meta property="og:url" content="http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/index.html">
+<meta property="og:site_name" content="Lab Pemrograman Dasar">
+<meta property="og:description" content="Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan">
+<meta property="og:updated_time" content="2017-06-07T08:33:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tipe Data Bentukan">
+<meta name="twitter:description" content="Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan">
+    
+        <link rel="alternate" type="application/atom+xml" title="Lab Pemrograman Dasar" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Fahri Firdausillah</h5>
+          <a href="mailto:fahri@dsn.dinus.ac.id" title="fahri@dsn.dinus.ac.id" class="mail">fahri@dsn.dinus.ac.id</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Beranda
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Arsip
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Label
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Kategori
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Tipe Data Bentukan</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Cari">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Tipe Data Bentukan</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-07T07:09:47.000Z" itemprop="datePublished" class="page-time">
+  2017-06-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/bahasa-C/">bahasa C</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/bahasa-C/tipe-data/">tipe data</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/bahasa-C/tipe-data/struct/">struct</a></li></ul></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Fungsi-Operator-untuk-Tipe-Data-Bentukan"><span class="post-toc-number">1.</span> <span class="post-toc-text">Fungsi Operator untuk Tipe Data Bentukan</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-tipe-data-bentukan"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Tipe Data Bentukan</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-07 14:09:47" datetime="2017-06-07T07:09:47.000Z"  itemprop="datePublished">2017-06-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/bahasa-C/">bahasa C</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/bahasa-C/tipe-data/">tipe data</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/bahasa-C/tipe-data/struct/">struct</a></li></ul></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan tiga variabel yang saling terhubung, yaitu tiga variabel dengan tipe data integer untuk meyimpan nilai jam, menit, dan detik. Jika menggunakan cara konvensional yaitu mendeklarasikan tiga variabel secara manual kemudian mengisikan nilainya, maka akan cukup merepotkan. Belum lagi jika data waktu yang perlu kita simpan dan manipulasi lebih dari satu dan perlu disimpan dengan menggunakan <em>array</em>.</p>
+<p>Sebagai solusi dari permasalahan tersebut, bahasa pemrograman biasanya menyediakan mekanisme khusus untuk membentuk tipe data baru dengan menggabungkan tipe data primitif yang sudah ada. Dalam bahasa pemrograman C, perintah yang digunakan untuk membentuk struktur tipe data baru adalah mengguanakan perintah <code>struct</code> yang diikuti nama tipe data dan komponen-komponen tipe datanya. Berikut adalah contoh pembuatan/deklarasi struktur tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code>:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> jam;</div><div class="line">    <span class="keyword">int</span> menit;</div><div class="line">    <span class="keyword">int</span> detik;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">var_time</span>;</span></div></pre></td></tr></table></figure>
+<p>Pada contoh koding di atas, terlihat pada baris 1 - 4 cara deklarasi tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code> yang diikuti dengan nama struktur dan komponen tipe datanya. Sedangkan pada baris 6 ditunjukkan cara penggunaan struktur baru yang telah dideklarasikan adalah menggunakan perintah <code>struct</code> yang diikuti nama struktur dan nama variabelnya.</p>
+<p>Setelah mendeklarasikan struktur serta variabelnya, kita dapat mengakses komponen dari tipe data tersebut dengan menggunakan operator <code>.</code> (titik) setelah nama variabelnya. Contoh pengaksesan komponen pada struktur sebagaimana ditunjukkan pada koding berikut:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">var_time</span>;</span></div><div class="line">var_time.jam = <span class="number">2</span>;</div><div class="line">var_time.menit = <span class="number">40</span>;</div><div class="line">var_time.detik = <span class="number">33</span>;</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d:%d:%d"</span>, var_time.jam, var_time.menit, var_time.detik);</div></pre></td></tr></table></figure>
+<p>Koding pada baris 2 - 4 mengakses komponen jam, menit, dan detik untuk mengisikan nilai pada komponen variabel tersebut, sedangkan pada baris 6 nilai yang telah diisikan diakses untuk dicetak menggunakan perintah <code>printf</code>.</p>
+<p>Deklarasi variabel struct baru harus selalu menggunakan kata kunci <code>struct</code> untuk menunjukkan bahwa tipe data <code>time</code> adalah tipe data dalam bentuk struktur. Namun kita dapat mengguanakan perintah <code>typedef</code> untuk memberikan alias pada struktur tersebut sehingga kita dapat menggunakannya selayaknya tipe data primitif lain. Contoh penggunaan typdef ditunjukkan pada koding di bawah ini:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">s_time</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> jam;</div><div class="line">    <span class="keyword">int</span> menit;</div><div class="line">    <span class="keyword">int</span> detik;</div><div class="line">&#125; time;</div><div class="line"></div><div class="line">time new_time;</div></pre></td></tr></table></figure>
+<h3 id="Fungsi-Operator-untuk-Tipe-Data-Bentukan"><a href="#Fungsi-Operator-untuk-Tipe-Data-Bentukan" class="headerlink" title="Fungsi Operator untuk Tipe Data Bentukan"></a>Fungsi Operator untuk Tipe Data Bentukan</h3><p>Membuat struktur tipe data baru saja tidak cukup. Agar tipe data yang telah kita buat dapat digunakan dengan baik, selain mendeklarasikan strukturnya, kita juga harus membuatkan fungsi-fungsi untuk mengoperasikan tipe data tersebut. Berdasarkan kategori penggunaannya, ada empat jenis fungsi operator yang biasanya dibuat setiap membuat tipe data baru yaitu:</p>
+<ul>
+<li><strong>Fungsi konstruktor</strong>: fungsi yang digunakan untuk membentuk tipe data baru</li>
+<li><strong>Fungsi selector</strong>: fungsi yang digunakan untuk mendapatkan nilai komponen atau nilai tertentu dari tipe data baru</li>
+<li><strong>Fungsi validator</strong>: fungsi yang digunakan untuk memastikan bahwa nilai yang diinputkan pada komponen tipe data valid sesuai logika yang dibuat.</li>
+<li><strong>Fungsi manipulasi</strong>: fungsi untuk melakukan berbagai macam memanipulasi tipe data yang telah dibuat.</li>
+</ul>
+<p>Berikut adalah dua contoh fungsi konstruktor yang digunakan untuk membuat tipe data <strong>time</strong> dengan menggunakan dua alternatif cara:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function">time <span class="title">make_time</span><span class="params">(<span class="keyword">int</span> j, <span class="keyword">int</span> m, <span class="keyword">int</span> d)</span></span></div><div class="line">&#123;</div><div class="line">  time waktu;</div><div class="line">  waktu.j = j;</div><div class="line">  waktu.m = m;</div><div class="line">  waktu.d = d;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> waktu;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">time <span class="title">seconds_2_time</span><span class="params">(<span class="keyword">int</span> seconds)</span></span></div><div class="line">&#123;</div><div class="line">    time waktu;</div><div class="line">    waktu.jam = seconds / <span class="number">3600</span>;</div><div class="line">    waktu.menit = (seconds % <span class="number">3600</span>) / <span class="number">60</span>;</div><div class="line">    waktu.detik = seconds % <span class="number">60</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> time;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Terakhir diperbaharui: <time datetime="2017-06-07T08:33:16.000Z" itemprop="dateUpdated">2017-06-07 15:33:16</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://labdaspro.github.io">
+            <img src="/img/avatar.jpg" alt="Fahri Firdausillah">
+            Fahri Firdausillah
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/abstract-data-type/">abstract data type</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class/">class</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/struct/">struct</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tipe-data/">tipe data</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/&title=《Tipe Data Bentukan》 — Lab Pemrograman Dasar&pic=http://labdaspro.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/&title=《Tipe Data Bentukan》 — Lab Pemrograman Dasar&source=Tempat untuk Belajar pemrograman dari awal." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Tipe Data Bentukan》 — Lab Pemrograman Dasar&url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/&via=http://labdaspro.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/02/Fungsi/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Fungsi</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        Total pengunjung web:<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        Total pengunjung:<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>Blog ini menggunakan lisensi: <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Fahri Firdausillah &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/&title=《Tipe Data Bentukan》 — Lab Pemrograman Dasar&pic=http://labdaspro.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/&title=《Tipe Data Bentukan》 — Lab Pemrograman Dasar&source=Tempat untuk Belajar pemrograman dari awal." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Tipe Data Bentukan》 — Lab Pemrograman Dasar&url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/&via=http://labdaspro.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aQW7DMAxEUd//0u62QGH7D2kXEPW1CpIm1tNiKlI6DjzOP+P3+1evr75FnnJ8MWTIkLEs47wd9wyCTH85/QUZMmTsw7hKsDRY0wXiz32YswwZMmTgECT4dJlkyJAhI2VcFZzBI3ERK0OGDBlpqXn/Q2c4yNQ/qcVlyJCxIINH4f+//uR8Q4YMGUsxahFZO9qsteTQrGTIkDGawQMubavx6RIqupYhQ4aM0YzaxQjSDks3eeSJL18OkyFDxlIM3qDvtO9JHNfmIEOGjKkMXqC+ezzAAWhuMmTIGM3gLTPyl/cpTgI0jWYZMmTsyeCt/LdKULIdREWsDBkyhjLI9otfuegcMJAlu4xsGTJkjGaksdu5itGHoYWTIUPGOAYvX2vvk/Dln75QhcuQIWNZxn2cdS5s9YtYtEwyZMgYzSCAtFXHFys9MHgAy5AhYyijFna8yOQR/MLJhgwZMkYzSOCmj+HNstpBqQwZMvZh9K9WHI2RbkCDkw0ZMmSMZvDLFmmM1iKYX/iQIUPGPow0cGsFba0OfZibDBkytmGQcEyRJFL5RrN4r02GDBnLMs5wEEZ6zSJt+aH/GDJkyBjEqLXG0g1cv7kWNN1kyJAxlEFClgcf31bWliz4mgwZMsYxePB1DhqLU+QHAzJkyJCBW2lkcjziPwlcGTJkbMDgpWm/lUaOLmTIkLEDI73U1dkmvnUhTIYMGfswWqVjGKn9I4TWQaYMGTLWY/wA4t9gvva06QoAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Lab Pemrograman Dasar';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Universitas Dian Nuswantoro';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

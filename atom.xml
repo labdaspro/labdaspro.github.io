@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://labdaspro.github.io/"/>
-  <updated>2017-06-02T09:01:05.000Z</updated>
+  <updated>2017-06-07T08:33:16.000Z</updated>
   <id>http://labdaspro.github.io/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tipe Data Bentukan</title>
+    <link href="http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/"/>
+    <id>http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/</id>
+    <published>2017-06-07T07:09:47.000Z</published>
+    <updated>2017-06-07T08:33:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan tiga variabel yang saling terhubung, yaitu tiga variabel dengan tipe data integer untuk meyimpan nilai jam, menit, dan detik. Jika menggunakan cara konvensional yaitu mendeklarasikan tiga variabel secara manual kemudian mengisikan nilainya, maka akan cukup merepotkan. Belum lagi jika data waktu yang perlu kita simpan dan manipulasi lebih dari satu dan perlu disimpan dengan menggunakan <em>array</em>.</p>
+<p>Sebagai solusi dari permasalahan tersebut, bahasa pemrograman biasanya menyediakan mekanisme khusus untuk membentuk tipe data baru dengan menggabungkan tipe data primitif yang sudah ada. Dalam bahasa pemrograman C, perintah yang digunakan untuk membentuk struktur tipe data baru adalah mengguanakan perintah <code>struct</code> yang diikuti nama tipe data dan komponen-komponen tipe datanya. Berikut adalah contoh pembuatan/deklarasi struktur tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code>:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> jam;</div><div class="line">    <span class="keyword">int</span> menit;</div><div class="line">    <span class="keyword">int</span> detik;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">var_time</span>;</span></div></pre></td></tr></table></figure>
+<p>Pada contoh koding di atas, terlihat pada baris 1 - 4 cara deklarasi tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code> yang diikuti dengan nama struktur dan komponen tipe datanya. Sedangkan pada baris 6 ditunjukkan cara penggunaan struktur baru yang telah dideklarasikan adalah menggunakan perintah <code>struct</code> yang diikuti nama struktur dan nama variabelnya.</p>
+<p>Setelah mendeklarasikan struktur serta variabelnya, kita dapat mengakses komponen dari tipe data tersebut dengan menggunakan operator <code>.</code> (titik) setelah nama variabelnya. Contoh pengaksesan komponen pada struktur sebagaimana ditunjukkan pada koding berikut:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">var_time</span>;</span></div><div class="line">var_time.jam = <span class="number">2</span>;</div><div class="line">var_time.menit = <span class="number">40</span>;</div><div class="line">var_time.detik = <span class="number">33</span>;</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d:%d:%d"</span>, var_time.jam, var_time.menit, var_time.detik);</div></pre></td></tr></table></figure>
+<p>Koding pada baris 2 - 4 mengakses komponen jam, menit, dan detik untuk mengisikan nilai pada komponen variabel tersebut, sedangkan pada baris 6 nilai yang telah diisikan diakses untuk dicetak menggunakan perintah <code>printf</code>.</p>
+<p>Deklarasi variabel struct baru harus selalu menggunakan kata kunci <code>struct</code> untuk menunjukkan bahwa tipe data <code>time</code> adalah tipe data dalam bentuk struktur. Namun kita dapat mengguanakan perintah <code>typedef</code> untuk memberikan alias pada struktur tersebut sehingga kita dapat menggunakannya selayaknya tipe data primitif lain. Contoh penggunaan typdef ditunjukkan pada koding di bawah ini:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">s_time</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> jam;</div><div class="line">    <span class="keyword">int</span> menit;</div><div class="line">    <span class="keyword">int</span> detik;</div><div class="line">&#125; time;</div><div class="line"></div><div class="line">time new_time;</div></pre></td></tr></table></figure>
+<h3 id="Fungsi-Operator-untuk-Tipe-Data-Bentukan"><a href="#Fungsi-Operator-untuk-Tipe-Data-Bentukan" class="headerlink" title="Fungsi Operator untuk Tipe Data Bentukan"></a>Fungsi Operator untuk Tipe Data Bentukan</h3><p>Membuat struktur tipe data baru saja tidak cukup. Agar tipe data yang telah kita buat dapat digunakan dengan baik, selain mendeklarasikan strukturnya, kita juga harus membuatkan fungsi-fungsi untuk mengoperasikan tipe data tersebut. Berdasarkan kategori penggunaannya, ada empat jenis fungsi operator yang biasanya dibuat setiap membuat tipe data baru yaitu:</p>
+<ul>
+<li><strong>Fungsi konstruktor</strong>: fungsi yang digunakan untuk membentuk tipe data baru</li>
+<li><strong>Fungsi selector</strong>: fungsi yang digunakan untuk mendapatkan nilai komponen atau nilai tertentu dari tipe data baru</li>
+<li><strong>Fungsi validator</strong>: fungsi yang digunakan untuk memastikan bahwa nilai yang diinputkan pada komponen tipe data valid sesuai logika yang dibuat.</li>
+<li><strong>Fungsi manipulasi</strong>: fungsi untuk melakukan berbagai macam memanipulasi tipe data yang telah dibuat.</li>
+</ul>
+<p>Berikut adalah dua contoh fungsi konstruktor yang digunakan untuk membuat tipe data <strong>time</strong> dengan menggunakan dua alternatif cara:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function">time <span class="title">make_time</span><span class="params">(<span class="keyword">int</span> j, <span class="keyword">int</span> m, <span class="keyword">int</span> d)</span></span></div><div class="line">&#123;</div><div class="line">  time waktu;</div><div class="line">  waktu.j = j;</div><div class="line">  waktu.m = m;</div><div class="line">  waktu.d = d;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> waktu;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">time <span class="title">seconds_2_time</span><span class="params">(<span class="keyword">int</span> seconds)</span></span></div><div class="line">&#123;</div><div class="line">    time waktu;</div><div class="line">    waktu.jam = seconds / <span class="number">3600</span>;</div><div class="line">    waktu.menit = (seconds % <span class="number">3600</span>) / <span class="number">60</span>;</div><div class="line">    waktu.detik = seconds % <span class="number">60</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> time;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pe
+    
+    </summary>
+    
+      <category term="bahasa C" scheme="http://labdaspro.github.io/categories/bahasa-C/"/>
+    
+      <category term="tipe data" scheme="http://labdaspro.github.io/categories/bahasa-C/tipe-data/"/>
+    
+      <category term="struct" scheme="http://labdaspro.github.io/categories/bahasa-C/tipe-data/struct/"/>
+    
+    
+      <category term="struct" scheme="http://labdaspro.github.io/tags/struct/"/>
+    
+      <category term="class" scheme="http://labdaspro.github.io/tags/class/"/>
+    
+      <category term="abstract data type" scheme="http://labdaspro.github.io/tags/abstract-data-type/"/>
+    
+      <category term="tipe data" scheme="http://labdaspro.github.io/tags/tipe-data/"/>
+    
+  </entry>
   
   <entry>
     <title>Fungsi</title>
