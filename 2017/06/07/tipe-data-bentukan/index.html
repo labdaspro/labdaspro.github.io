@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://labdaspro.github.io/2017/06/07/tipe-data-bentukan/index.html">
 <meta property="og:site_name" content="Lab Pemrograman Dasar">
 <meta property="og:description" content="Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan">
-<meta property="og:updated_time" content="2017-06-07T11:27:32.000Z">
+<meta property="og:updated_time" content="2017-06-07T11:30:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tipe Data Bentukan">
 <meta name="twitter:description" content="Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan">
@@ -147,7 +147,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deklarasi-Struktur"><span class="post-toc-number">1.</span> <span class="post-toc-text">Deklarasi Struktur</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Fungsi-Operator"><span class="post-toc-number"></span> <span class="post-toc-text">Fungsi Operator</span></a>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deklarasi-Struktur"><span class="post-toc-number">1.</span> <span class="post-toc-text">Deklarasi Struktur</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Fungsi-Operator"><span class="post-toc-number">2.</span> <span class="post-toc-text">Fungsi Operator</span></a></li></ol>
         </nav>
     </aside>
     
@@ -176,7 +176,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>Dalam perjalanan pembuatan program, ada kalanya kita memerlukan tipe data baru yang tidak terdefinisikan sebelumnya pada sebuah bahasa pemrograman. Misalkan untuk menyimpan nilai waktu kita memerlukan tiga variabel yang saling terhubung, yaitu tiga variabel dengan tipe data integer untuk meyimpan nilai jam, menit, dan detik. Jika menggunakan cara konvensional yaitu mendeklarasikan tiga variabel secara manual kemudian mengisikan nilainya, maka akan cukup merepotkan. Belum lagi jika data waktu yang perlu kita simpan dan manipulasi lebih dari satu dan perlu disimpan dengan menggunakan <em>array</em>.</p>
 <a id="more"></a>
-<h3 id="Deklarasi-Struktur"><a href="#Deklarasi-Struktur" class="headerlink" title="Deklarasi Struktur"></a>Deklarasi Struktur</h3><p>Sebagai solusi dari permasalahan tersebut, bahasa pemrograman biasanya menyediakan mekanisme khusus untuk membentuk tipe data baru dengan menggabungkan tipe data primitif yang sudah ada. Dalam bahasa pemrograman C, perintah yang digunakan untuk membentuk struktur tipe data baru adalah mengguanakan perintah <code>struct</code> yang diikuti nama tipe data dan komponen-komponen tipe datanya. Berikut adalah contoh pembuatan/deklarasi struktur tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code>:</p>
+<h2 id="Deklarasi-Struktur"><a href="#Deklarasi-Struktur" class="headerlink" title="Deklarasi Struktur"></a>Deklarasi Struktur</h2><p>Sebagai solusi dari permasalahan tersebut, bahasa pemrograman biasanya menyediakan mekanisme khusus untuk membentuk tipe data baru dengan menggabungkan tipe data primitif yang sudah ada. Dalam bahasa pemrograman C, perintah yang digunakan untuk membentuk struktur tipe data baru adalah mengguanakan perintah <code>struct</code> yang diikuti nama tipe data dan komponen-komponen tipe datanya. Berikut adalah contoh pembuatan/deklarasi struktur tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code>:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> jam;</div><div class="line">    <span class="keyword">int</span> menit;</div><div class="line">    <span class="keyword">int</span> detik;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">var_time</span>;</span></div></pre></td></tr></table></figure>
 <p>Pada contoh koding di atas, terlihat pada baris 1 - 4 cara deklarasi tipe data <strong>time</strong> dengan menggunakan perintah <code>struct</code> yang diikuti dengan nama struktur dan komponen tipe datanya. Sedangkan pada baris 6 ditunjukkan cara penggunaan struktur baru yang telah dideklarasikan adalah menggunakan perintah <code>struct</code> yang diikuti nama struktur dan nama variabelnya.</p>
 <p>Setelah mendeklarasikan struktur serta variabelnya, kita dapat mengakses komponen dari tipe data tersebut dengan menggunakan operator <code>.</code> (titik) setelah nama variabelnya. Contoh pengaksesan komponen pada struktur sebagaimana ditunjukkan pada koding berikut:</p>
@@ -206,7 +206,7 @@
     <div class="content">
         
 <span class="post-time">
-    Terakhir diperbaharui: <time datetime="2017-06-07T11:27:32.000Z" itemprop="dateUpdated">2017-06-07 18:27:32</time>
+    Terakhir diperbaharui: <time datetime="2017-06-07T11:30:43.000Z" itemprop="dateUpdated">2017-06-07 18:30:43</time>
 </span><br>
 
 
